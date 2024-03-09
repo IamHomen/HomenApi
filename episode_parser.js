@@ -15,7 +15,7 @@ const BASE_URL2 = 'https://anitaku.to/';
 
 export const getDriveDirectLink= async ({ id }) => {
  try {
-  const driveUrl = `https://drive.usercontent.google.com/download?id=$id&export=view&authuser=0`;
+  const driveUrl = `https://drive.usercontent.google.com/download?id=${id}&export=view&authuser=0`;
 return driveUrl;
  } catch (err) {
   console.log(err);
