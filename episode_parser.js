@@ -13,6 +13,15 @@ const goload_stream_url = 'https://goload.pro/streaming.php';
 
 const BASE_URL2 = 'https://anitaku.to/';
 
+export const getDriveDirectLink= async ({ id }) => {
+ const driveUrl = `https://drive.usercontent.google.com/download?id=$id&export=view&authuser=0`;
+return driveUrl;
+ } catch (err) {
+  console.log(err);
+  return { error: err };
+ }
+};
+
 export const scrapeM3U8 = async ({ id }) => {
  let sources = [];
  let sources_bk = [];
